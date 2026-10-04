@@ -1,0 +1,92 @@
+# Bad Apple Manipulator
+
+A small Python project that downloads the classic Bad Apple video, processes each frame, and generates a stylized output with colorized frame differences while preserving the original audio.
+
+## Overview
+
+This project uses OpenCV, NumPy, and MoviePy to:
+
+- download the source video if it is not already present
+- process frames using grayscale thresholding and difference tracking
+- generate a transformed output video
+- merge the original audio back into the final MP4
+
+The script is designed around the idea of creating a modified version of the Bad Apple animation with an artistic color pattern while keeping the original timing and audio.
+
+## Features
+
+- Automatic video download from the configured Bad Apple source URL
+- Frame-by-frame processing with OpenCV
+- Threshold-based binary frame conversion
+- Difference tracking between consecutive frames
+- HSV-to-RGB color mapping for the edited frames
+- Audio preservation using MoviePy
+- Simple one-file workflow
+
+## Requirements
+
+Install the dependencies with pip:
+
+```bash
+pip install opencv-python numpy requests moviepy
+```
+
+You may also need system libraries for OpenCV depending on your platform.
+
+## Project Structure
+
+```text
+.
+├── main.py
+├── .gitignore
+├── video/
+├── output/
+├── README.md
+└── LICENSE
+```
+
+- `main.py` contains the processing pipeline
+- `video/` stores downloaded source videos
+- `output/` stores generated processed videos
+
+## Usage
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/BloodyFish/bad-apple-manipulator.git
+cd bad-apple-manipulator
+```
+
+2. Install required packages:
+
+```bash
+pip install opencv-python numpy requests moviepy
+```
+
+3. Run the script:
+
+```bash
+python main.py
+```
+
+The script will:
+
+- create the `video/` directory if needed
+- download the source video to `video/bad_apple.mov` if missing
+- process it into an output MP4 in `output/`
+- write a final version with audio to `output/bad_apple_output_sound.mp4`
+
+## Important Notes
+
+- The script uses `cv2.imshow()` during processing, so a display environment is helpful when running it locally.
+- This project is intended as a fun video-processing experiment and may require tuning for different environments or video sources.
+- Processing can take some time depending on video length and hardware performance.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Author
+
+Repository maintained by BloodyFish.
