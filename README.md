@@ -1,6 +1,8 @@
 # 🍎 Bad Apple Manipulator
 
-A small Python project that downloads the classic Bad Apple video, processes each frame, and generates a stylized output with colorized frame differences while preserving the original audio.
+A small Python project that downloads the classic Bad Apple video, processes each frame, and generates a stylized output with colorized frame differences while preserving the original audio.\
+[![Bad Apple But Every Pixel's Color Is Determined By How Much It Changes](https://img.youtube.com/vi/cKK4aCp3UmQ/0.jpg)](https://www.youtube.com/watch?v=cKK4aCp3UmQ)
+[![Bad Apple But Each Pixel Gradually Changes Color As the Base Color Changes](https://img.youtube.com/vi/FvbJ4TbtA14/0.jpg)](https://www.youtube.com/watch?v=FvbJ4TbtA14)
 
 ## 🤔 Overview
 
